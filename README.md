@@ -115,3 +115,52 @@ After cleaning:
 - All datasets contain consistent data types
 - Date and datetime fields are properly formatted
 - Datasets are ready for analysis at daily and hourly levels
+
+## ANALYZE — Data Analysis
+
+In this phase, the prepared datasets were analyzed to identify patterns, trends, and relationships related to user activity and behavior.
+
+### Tools Used
+- R (RStudio Cloud)
+- tidyverse (dplyr, lubridate)
+
+### Data Organization
+The analysis focused primarily on **daily-level data** to understand overall activity patterns, including:
+- Total daily steps
+- Daily calories burned
+- Daily sedentary minutes
+- Daily active minutes
+
+Hourly-level data was also aggregated to identify activity patterns by time of day.
+
+### Key Calculations and Aggregations
+
+**Daily-level analysis included:**
+- Average daily steps across all users
+- Average daily calories burned
+- Average daily sedentary minutes
+- Average daily very active minutes
+- Correlation analysis between:
+  - Total steps and sedentary minutes
+  - Total steps and calories burned
+- User-level averages to compare activity behavior between users
+- Categorization of activity levels (Low, Moderate, High) based on daily step counts
+
+**Hourly-level analysis included:**
+- Average number of steps per hour of the day
+- Identification of peak and low activity hours
+
+### Key Findings and Insights
+
+- Users average approximately **6,500 steps per day**, indicating moderate overall activity.
+- There is a **negative correlation** between daily steps and sedentary minutes, suggesting that more active users tend to spend less time sedentary.
+- A **positive correlation** exists between daily steps and calories burned, confirming expected physiological patterns.
+- Activity levels vary significantly across users, with clear differences between low, moderate, and highly active groups.
+- Hourly analysis shows that activity peaks during daytime hours and is lowest during late-night and early-morning hours.
+
+### Business Relevance
+
+These findings help answer the business questions by:
+- Identifying when users are most and least active
+- Highlighting behavioral differences between activity levels
+- Providing evidence to support targeted engagement strategies, such as activity reminders or personalized insights
