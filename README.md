@@ -151,3 +151,6 @@ This pattern suggests that users are most active during typical daytime and earl
 
 **Business implication:**  
 Bellabeat could leverage this insight to schedule motivational reminders during low-activity hours (early morning or late evening) and reinforce healthy habits or challenges during peak activity periods.
+
+🔗 **Visualization:**  
+[Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatAverageStepsbyHourofDay/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
