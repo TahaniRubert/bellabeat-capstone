@@ -80,3 +80,38 @@ The dataset is from 2016. It is historically useful but not reflective of curren
 
 **Tool Selection:**  
 RStudio Cloud was chosen as the primary analysis tool due to its ability to handle large datasets, integrate with GitHub, and support reproducible workflows using tidyverse.
+
+## PROCESS — Data Cleaning and Preparation
+
+### Tools Used
+- R (Posit Cloud)
+- tidyverse packages (dplyr, readr, lubridate)
+
+### Data Integrity Checks
+The datasets were checked for structural and data quality issues before analysis.
+
+- Verified dataset dimensions and column structures using `str()` and `glimpse()`
+- Checked for missing values using `colSums(is.na())`
+- Checked for duplicated rows using `duplicated()`
+
+### Data Cleaning Actions
+
+**Daily Activity Dataset**
+- No missing values detected
+- No duplicated rows detected
+- Converted `ActivityDate` from character to Date format
+
+**Hourly Datasets (steps, calories, intensity)**
+- No missing values detected
+- No duplicated rows detected
+- Converted `ActivityHour` from character to POSIXct datetime format
+
+**Sleep Minute Dataset**
+- Detected duplicated rows
+- Removed duplicates using `distinct()`
+
+### Validation
+After cleaning:
+- All datasets contain consistent data types
+- Date and datetime fields are properly formatted
+- Datasets are ready for analysis at daily and hourly levels
