@@ -140,3 +140,14 @@ The analysis was conducted at two levels:
 - Increased physical activity is associated with higher calorie expenditure and reduced sedentary time.
 - Specific low-activity time windows present opportunities for behavioral nudges and reminders.
 - Understanding hourly activity patterns can help Bellabeat optimize the timing of engagement notifications.
+
+## SHARE — Data Visualization & Key Insights
+
+### Insight 1: Average Steps by Hour of Day
+
+User activity follows a clear daily pattern. Average steps are lowest during early morning hours (12 AM–5 AM), increase sharply starting at 6 AM, and peak around midday (12 PM) and early evening (6–7 PM). Activity then declines significantly after 8 PM.
+
+This pattern suggests that users are most active during typical daytime and early evening hours, while late night and early morning periods show minimal movement.
+
+**Business implication:**  
+Bellabeat could leverage this insight to schedule motivational reminders during low-activity hours (early morning or late evening) and reinforce healthy habits or challenges during peak activity periods.
