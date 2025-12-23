@@ -177,4 +177,4 @@ This indicates that while users maintain regular sleep patterns, a large portion
 Bellabeat could use this insight to promote sleep education features, personalized bedtime reminders, and recovery-focused recommendations to help users improve overall sleep duration and quality.
 
 🔗 **Visualization:**  
-[Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/nuevo_17664189894260/Hoja2?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyUserActivitySleepInsights/Hoja2?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
