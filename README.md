@@ -1,189 +1,140 @@
-# bellabeat-capstone
-Case Study: Bellabeat Fitness Data Analysis – Google Data Analytics Capstone
-
 # Bellabeat Capstone – Google Data Analytics Certificate  
+**Case Study: Bellabeat Fitness Data Analysis**
 
-This case study analyzes smart device usage data from Fitbit to identify trends in physical activity, calorie expenditure, and sleep behavior. Using data analysis and visualization techniques, the project explores how users interact with their devices throughout the day and how these patterns can inform Bellabeat’s marketing strategy. The insights generated highlight opportunities for personalized engagement, habit-building features, and health-focused interventions aligned with real user behavior.
+This case study analyzes Fitbit smart device usage data to identify trends in physical activity, calorie expenditure, and sleep behavior. The objective is to understand how users interact with their devices throughout the day and translate these insights into actionable marketing recommendations for Bellabeat.
 
-## ASK – Business Task
+---
+
+## ASK — Business Task
 
 **Business Task:**  
-Analyze Fitbit smart device usage data to identify trends related to physical activity, sleep, and daily behavior that can be applied to Bellabeat’s target users. The insights gained will support strategic marketing recommendations to improve the positioning and usage of Bellabeat products.
+Analyze Fitbit smart device usage data to identify trends related to physical activity, sleep, and daily behavior that can inform Bellabeat’s marketing strategy and product positioning.
 
-**Stakeholders:**  
-- Urška Sršen – Co-founder and Chief Creative Officer  
-- Sando Mur – Co-founder and key executive team member  
-- Bellabeat Marketing Team – Responsible for applying insights to campaigns and strategies  
-- Bellabeat Data Analytics Team – Including myself as a junior data analyst, responsible for preparing and presenting the analysis
+**Key Stakeholders:**  
+- Urška Sršen — Co-founder & Chief Creative Officer  
+- Sando Mur — Co-founder & Executive Team Member  
+- Bellabeat Marketing Team  
+- Bellabeat Data Analytics Team  
 
-**Guiding Analysis Questions:**  
-1. What patterns of daily activity (steps, intensity levels, and calories) do users show throughout the week?  
-2. How do sleep habits relate to physical activity and caloric expenditure?  
-3. At what times of the day are users most and least active, and how can Bellabeat leverage this information to enhance its marketing strategies?
+**Guiding Questions:**  
+1. What daily activity patterns do users exhibit?  
+2. How do sleep habits relate to physical activity and calorie burn?  
+3. When during the day are users most and least active?
+
+---
 
 ## PREPARE — Data Collection & Integrity Review
 
 **Data Source:**  
-The dataset used for this analysis comes from the Fitabase 2016 Fitness Tracker Data made available by Möbius. It includes behavioral data collected from Fitbit devices between March and May 2016. The dataset contains information on daily activity, steps, sleep, intensity levels, calories, heart rate, and weight logs.
+Fitabase 2016 Fitness Tracker Data (Kaggle), collected from 30 Fitbit users between March and May 2016.
 
-Although the study includes 30 Fitbit users, not all users appear in every dataset. Participation varies based on which features were enabled on the device and whether users manually logged information such as weight.
+**Datasets Used:**  
+- Daily activity, steps, calories, and intensity  
+- Hourly activity datasets  
+- Minute-level sleep data  
 
-**Files Included:**  
-The following CSV files were used in the analysis and stored in the project repository under `data/raw/`:
+Not all users appear in every dataset due to optional device features and manual logging.
 
-- dailyActivity_merged.csv  
-- heartrate_seconds_merged.csv  
-- hourlyCalories_merged.csv  
-- hourlyIntensities_merged.csv  
-- hourlySteps_merged.csv  
-- minuteCaloriesNarrow_merged.csv  
-- minuteIntensitiesNarrow_merged.csv  
-- minuteMETsNarrow_merged.csv  
-- minuteSleep_merged.csv  
-- minuteStepsNarrow_merged.csv  
-- weightLogInfo_merged.csv  
-
-**Structural Review:**  
-All datasets were inspected in R using `glimpse()`, `head()`, and row/column counts.  
-Key observations include:
-
-- dailyActivity  
-- heartrate_seconds
-- hourly datasets
-- minute-level datasets
-- weightLogInfo
-
-This inspection confirms variability in data volume and completeness across datasets.
-
-**ROCCC Evaluation:**  
-The dataset includes data from 30 Fitbit users, but participation varies across features such as sleep, heart rate, and weight logging. Some datasets contain incomplete records, while others rely on manual user input. Additionally, the data is from 2016, which limits its representation of current user behavior.
+**Data Limitations:**  
+- Small sample size (30 users)  
+- Incomplete participation across datasets  
+- Limited sleep and weight data  
+- No demographic information  
+- Data collected in 2016  
 
 **Tool Selection:**  
-RStudio Cloud was chosen as the primary analysis tool due to its ability to handle large datasets, integrate with GitHub, and support reproducible workflows using tidyverse.
+RStudio Cloud was used for data cleaning and analysis due to its ability to handle large datasets and ensure reproducibility.
 
-## PROCESS — Data Cleaning and Preparation
+---
 
-### Tools Used
-- R (Posit Cloud)
-- tidyverse packages (dplyr, readr, lubridate)
+## PROCESS — Data Cleaning & Preparation
 
-### Data Integrity Checks
-The datasets were checked for structural and data quality issues before analysis.
+Data was cleaned and validated using R and tidyverse packages.
 
-- Verified dataset dimensions and column structures using `str()` and `glimpse()`
-- Checked for missing values using `colSums(is.na())`
-- Checked for duplicated rows using `duplicated()`
+**Key Actions:**  
+- Verified data structure and consistency  
+- Checked and removed duplicate records where applicable  
+- Converted date and datetime fields to proper formats  
+- Confirmed datasets were suitable for daily and hourly analysis  
 
-### Data Cleaning Actions
+All datasets used in analysis were confirmed clean and properly formatted.
 
-**Daily Activity Dataset**
-- No missing values detected
-- No duplicated rows detected
-- Converted `ActivityDate` from character to Date format
+---
 
-**Hourly Datasets (steps, calories, intensity)**
-- No missing values detected
-- No duplicated rows detected
-- Converted `ActivityHour` from character to POSIXct datetime format
+## ANALYZE — Data Analysis
 
-**Sleep Minute Dataset**
-- Detected duplicated rows
-- Removed duplicates using `distinct()`
+Analysis was conducted at two levels:
 
-### Validation
-After cleaning:
-- All datasets contain consistent data types
-- Date and datetime fields are properly formatted
-- Datasets are ready for analysis at daily and hourly levels
+### Daily-Level Analysis
+- Average daily step count is approximately **6,500 steps**  
+- Users spend a large portion of the day sedentary  
+- A positive relationship exists between steps and calories burned  
+- Higher activity levels correspond to lower sedentary time  
 
-## ANALYZE – Data Analysis
+### Hourly-Level Analysis
+- Activity is lowest during late night and early morning  
+- Activity increases from early morning, peaking midday and early evening  
+- Patterns indicate consistent daily routines across users  
 
-### Analysis Approach
-The analysis was conducted at two levels:
-- Daily-level analysis to understand overall activity, sedentary behavior, and calorie expenditure.
-- Hourly-level analysis to identify patterns of activity throughout the day.
+**Key Insight:**  
+User activity follows predictable daily rhythms, creating opportunities for time-based engagement strategies.
 
-### Key Findings – Daily Level
-- The average daily step count across users is approximately 6,500 steps.
-- Users spend a high proportion of the day in sedentary behavior (around 990 minutes on average).
-- There is a moderate positive correlation between total daily steps and calories burned.
-- A negative relationship exists between daily steps and sedentary minutes.
-- Users with higher activity levels tend to have fewer sedentary minutes per day.
-
-### Key Findings – Hourly Level
-- Activity levels are lowest during late night and early morning hours.
-- Step activity increases steadily in the morning, peaking during midday and early evening.
-- Activity declines again during late evening hours.
-- These patterns suggest consistent daily routines across users.
-
-### Business Insights
-- Increased physical activity is associated with higher calorie expenditure and reduced sedentary time.
-- Specific low-activity time windows present opportunities for behavioral nudges and reminders.
-- Understanding hourly activity patterns can help Bellabeat optimize the timing of engagement notifications.
+---
 
 ## SHARE — Data Visualization & Key Insights
 
 ### Insight 1: Average Steps by Hour of Day
-
-User activity follows a clear daily pattern. Average steps are lowest during early morning hours (12 AM–5 AM), increase sharply starting at 6 AM, and peak around midday (12 PM) and early evening (6–7 PM). Activity then declines significantly after 8 PM.
-
-This pattern suggests that users are most active during typical daytime and early evening hours, while late night and early morning periods show minimal movement.
+User activity is lowest between 12 AM and 5 AM, increases from 6 AM onward, and peaks around midday and early evening.
 
 **Business implication:**  
-Bellabeat could leverage this insight to schedule motivational reminders during low-activity hours (early morning or late evening) and reinforce healthy habits or challenges during peak activity periods.
+Bellabeat can schedule reminders during low-activity hours and reinforce engagement during peak activity periods.
 
 🔗 **Visualization:**  
-[Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyAverageStepsbyHourofDay/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyAverageStepsbyHourofDay/Hoja1)
+
+---
 
 ### Insight 2: Relationship Between Steps and Calories Burned
-
-The scatter plot shows a clear positive relationship between average daily steps and average daily calories burned. Users who take more steps per day generally burn more calories, although the relationship is not perfectly linear.
-
-This suggests that while step count is a strong driver of calorie expenditure, other factors such as activity intensity, duration, and individual differences also influence total calories burned.
+There is a clear positive relationship between daily steps and calories burned.
 
 **Business implication:**  
-Bellabeat can emphasize step-based goals as an effective way to increase calorie burn, while also promoting higher-intensity activities for users who want to maximize energy expenditure without significantly increasing step count.
+Step-based goals can be promoted as a simple and effective driver of calorie expenditure.
 
 🔗 **Visualization:**  
-[Average Daily Steps vs Calories Burned – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyStepsvsCaloriesRelationship/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Daily Steps vs Calories Burned – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyStepsvsCaloriesRelationship/Hoja1)
+
+---
 
 ### Insight 3: Average Daily Sleep Duration
-
-The visualization shows that most users sleep between 5 and 7 hours per night on average. Sleep duration remains relatively consistent over time, with occasional peaks and dips but no strong upward or downward trend.
-
-This indicates that while users maintain regular sleep patterns, a large portion may not be reaching the recommended 7–9 hours of sleep consistently.
+Most users sleep between 5 and 7 hours per night, below the recommended range.
 
 **Business implication:**  
-Bellabeat could use this insight to promote sleep education features, personalized bedtime reminders, and recovery-focused recommendations to help users improve overall sleep duration and quality.
+Bellabeat can introduce sleep education, bedtime reminders, and recovery-focused features.
 
 🔗 **Visualization:**  
-[Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyUserActivitySleepInsights/Hoja2?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyUserActivitySleepInsights/Hoja2)
+
+---
 
 ## ACT — Final Recommendations & Next Steps
 
 ### Final Conclusion
-User behavior shows consistent daily routines. Activity peaks during daytime and early evening hours, step count strongly correlates with calorie burn, and most users sleep below the recommended 7–9 hours per night. These patterns reveal clear opportunities for targeted engagement and habit-building features within the Bellabeat ecosystem.
-
----
+Users display consistent daily routines. Activity peaks during daytime and early evening, step count strongly correlates with calorie burn, and many users sleep less than recommended. These patterns present clear opportunities for targeted engagement.
 
 ### How Bellabeat Can Apply These Insights
-- Launch challenges and engagement features during peak activity hours to maximize participation  
-- Send motivational nudges during low-activity periods to encourage movement  
-- Emphasize step-based goals as an accessible driver of calorie burn  
-- Introduce sleep education and bedtime reminders for users consistently sleeping under 7 hours  
-
----
+- Launch challenges during peak activity hours  
+- Send nudges during low-activity periods  
+- Emphasize step-based goals  
+- Promote sleep education and bedtime routines  
 
 ### Recommended Next Steps
-- Segment users based on activity levels and sleep behavior  
-- Personalize notification timing according to individual routines  
-- Develop sleep-focused features that combine duration and consistency  
-- Test behavioral nudges aligned with real daily patterns  
-
----
+- Segment users by activity and sleep behavior  
+- Personalize notification timing  
+- Develop sleep-focused features  
+- Test behavior-based nudges  
 
 ### Additional Data to Strengthen the Analysis
-- Sleep quality metrics (REM, deep sleep, awakenings)  
-- User demographics and lifestyle data  
-- Longer time ranges for trend analysis  
-- Relationship between sleep duration and next-day activity  
+- Sleep quality metrics  
+- User demographics  
+- Longer time-series data  
+- Relationship between sleep and next-day activity  
