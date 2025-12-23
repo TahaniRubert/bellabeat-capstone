@@ -2,6 +2,9 @@
 Case Study: Bellabeat Fitness Data Analysis – Google Data Analytics Capstone
 
 # Bellabeat Capstone – Google Data Analytics Certificate  
+
+This case study analyzes smart device usage data from Fitbit to identify trends in physical activity, calorie expenditure, and sleep behavior. Using data analysis and visualization techniques, the project explores how users interact with their devices throughout the day and how these patterns can inform Bellabeat’s marketing strategy. The insights generated highlight opportunities for personalized engagement, habit-building features, and health-focused interventions aligned with real user behavior.
+
 ## ASK – Business Task
 
 **Business Task:**  
