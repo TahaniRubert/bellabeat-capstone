@@ -178,3 +178,32 @@ Bellabeat could use this insight to promote sleep education features, personaliz
 
 🔗 **Visualization:**  
 [Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyUserActivitySleepInsights/Hoja2?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+## ACT — Final Recommendations & Next Steps
+
+### Final Conclusion
+User behavior shows consistent daily routines. Activity peaks during daytime and early evening hours, step count strongly correlates with calorie burn, and most users sleep below the recommended 7–9 hours per night. These patterns reveal clear opportunities for targeted engagement and habit-building features within the Bellabeat ecosystem.
+
+---
+
+### How Bellabeat Can Apply These Insights
+- Launch challenges and engagement features during peak activity hours to maximize participation  
+- Send motivational nudges during low-activity periods to encourage movement  
+- Emphasize step-based goals as an accessible driver of calorie burn  
+- Introduce sleep education and bedtime reminders for users consistently sleeping under 7 hours  
+
+---
+
+### Recommended Next Steps
+- Segment users based on activity levels and sleep behavior  
+- Personalize notification timing according to individual routines  
+- Develop sleep-focused features that combine duration and consistency  
+- Test behavioral nudges aligned with real daily patterns  
+
+---
+
+### Additional Data to Strengthen the Analysis
+- Sleep quality metrics (REM, deep sleep, awakenings)  
+- User demographics and lifestyle data  
+- Longer time ranges for trend analysis  
+- Relationship between sleep duration and next-day activity  
