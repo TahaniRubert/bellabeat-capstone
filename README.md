@@ -154,3 +154,27 @@ Bellabeat could leverage this insight to schedule motivational reminders during 
 
 🔗 **Visualization:**  
 [Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatAverageStepsbyHourofDay/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+### Insight 2: Relationship Between Steps and Calories Burned
+
+The scatter plot shows a clear positive relationship between average daily steps and average daily calories burned. Users who take more steps per day generally burn more calories, although the relationship is not perfectly linear.
+
+This suggests that while step count is a strong driver of calorie expenditure, other factors such as activity intensity, duration, and individual differences also influence total calories burned.
+
+**Business implication:**  
+Bellabeat can emphasize step-based goals as an effective way to increase calorie burn, while also promoting higher-intensity activities for users who want to maximize energy expenditure without significantly increasing step count.
+
+🔗 **Visualization:**  
+[Average Daily Steps vs Calories Burned – Tableau Public](https://public.tableau.com/views/Averagedailystepsvsaveragedailycalories/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+### Insight 3: Average Daily Sleep Duration
+
+The visualization shows that most users sleep between 5 and 7 hours per night on average. Sleep duration remains relatively consistent over time, with occasional peaks and dips but no strong upward or downward trend.
+
+This indicates that while users maintain regular sleep patterns, a large portion may not be reaching the recommended 7–9 hours of sleep consistently.
+
+**Business implication:**  
+Bellabeat could use this insight to promote sleep education features, personalized bedtime reminders, and recovery-focused recommendations to help users improve overall sleep duration and quality.
+
+🔗 **Visualization:**  
+[Average Daily Sleep Duration – Tableau Public](https://public.tableau.com/views/nuevo_17664189894260/Hoja2?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
