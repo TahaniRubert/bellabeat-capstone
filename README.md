@@ -153,7 +153,7 @@ This pattern suggests that users are most active during typical daytime and earl
 Bellabeat could leverage this insight to schedule motivational reminders during low-activity hours (early morning or late evening) and reinforce healthy habits or challenges during peak activity periods.
 
 🔗 **Visualization:**  
-[Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatAverageStepsbyHourofDay/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Steps by Hour of Day – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyAverageStepsbyHourofDay/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ### Insight 2: Relationship Between Steps and Calories Burned
 
@@ -165,7 +165,7 @@ This suggests that while step count is a strong driver of calorie expenditure, o
 Bellabeat can emphasize step-based goals as an effective way to increase calorie burn, while also promoting higher-intensity activities for users who want to maximize energy expenditure without significantly increasing step count.
 
 🔗 **Visualization:**  
-[Average Daily Steps vs Calories Burned – Tableau Public](https://public.tableau.com/views/Averagedailystepsvsaveragedailycalories/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Average Daily Steps vs Calories Burned – Tableau Public](https://public.tableau.com/views/BellabeatCaseStudyStepsvsCaloriesRelationship/Hoja1?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ### Insight 3: Average Daily Sleep Duration
 
